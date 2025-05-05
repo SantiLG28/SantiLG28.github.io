@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;  /* Tipografía futurista */
+    background-color: #f0f4f7;  /* Fondo más limpio y luminoso */
+    padding-bottom: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333;  /* Texto de color oscuro para contraste */
+}
+
+/* Header */
+header {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #00d1ff, #00b3cc, #5e4b8b);  /* Gradiente de colores futuristas */
+    color: #fff;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 60px rgba(0, 211, 255, 0.5); /* Sombra brillante */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+header:hover {
+    box-shadow: 0 15px 80px rgba(0, 211, 255, 0.8);  /* Efecto de sombra intensa al hacer hover */
+}
+
+header svg {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 0 20px rgba(0, 211, 255, 1)); /* Efecto de neón en el logo */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+header svg:hover {
+    transform: rotate(360deg);  /* Rotación futurista del logo */
+    filter: drop-shadow(0 0 25px rgba(0, 211, 255, 1));  /* Aumenta el brillo del logo */
+}
+
+#site-name {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 211, 255, 0.7);  /* Sombra brillante al texto */
+}
+
+/* Navigation */
+nav {
+    background-color: #111;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 211, 255, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: #00d1ff;
+    transform: scale(1.1); /* Efecto de agrandado */
+    border-radius: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00d1ff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover:before {
+    transform: scaleX(1);  /* Subrayado animado */
+}
+
+nav ul li a:hover {
+    color: #121212;
+}
+
+/* Article */
+article {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+article h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px rgba(0, 211, 255, 0.6);
+}
+
+/* Gallery */
+.galeria {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.galeria .producto {
+    text-align: center;
+    width: 280px;
+    background-color: #222;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 211, 255, 0.3);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria .producto:hover {
+    transform: translateY(-15px); /* Efecto de elevación */
+    box-shadow: 0 20px 50px rgba(0, 211, 255, 0.6);
+}
+
+.galeria .producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: none;
+    transition: transform 0.3s ease;
+    filter: brightness(85%);
+}
+
+.galeria .producto img:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+.galeria .producto p {
+    margin: 15px 0;
+    font-weight: bold;
+    color: #00d1ff;  /* Texto en color neón */
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px rgba(0, 211, 255, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 60px;
+    border-top: 5px solid #00d1ff; /* Barra luminosa en el pie de página */
+    box-shadow: 0 -10px 30px rgba(0, 211, 255, 0.2);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00d1ff;
+    text-decoration: underline;
+    text-shadow: 0 0 15px rgba(0, 211, 255, 0.7);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .galeria {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .galeria .producto {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    nav ul li {
+        padding: 0 20px;
+    }
+
+    #site-name {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
+    nav ul li {
+        padding: 0 15px;
+    }
+
+    #site-name {
+        font-size: 28px;
+    }
+
+    article h2 {
+        font-size: 28px;
+    }
+
+    .galeria .producto {
+        width: 100%;
+        max-width: 280px;
+    }
+}
